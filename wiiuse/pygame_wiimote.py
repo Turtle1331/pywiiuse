@@ -17,7 +17,7 @@ Gary Bishop January 2008
 
 import pygame
 from threading import Thread
-from Queue import Queue, Empty
+from queue import Queue, Empty
 import time
 
 # events to use. Is there a way to get ones known to be unused?
