@@ -18,7 +18,7 @@ pygame_wiimote.init(1, 5) # look for 1, wait 5 seconds
 n = pygame_wiimote.get_count() # how many did we get?
 
 if n == 0:
-    print 'no wiimotes found'
+    print('no wiimotes found')
     sys.exit(1)
 
 w,h = size = (512,512)
@@ -44,10 +44,10 @@ while run:
             break
         elif event.type in [ pygame_wiimote.WIIMOTE_BUTTON_PRESS,
                              pygame_wiimote.NUNCHUK_BUTTON_PRESS ]:
-            print event.button, 'pressed on', event.id
+            print(event.button, 'pressed on', event.id)
         elif event.type in [ pygame_wiimote.WIIMOTE_BUTTON_RELEASE,
                              pygame_wiimote.NUNCHUK_BUTTON_RELEASE ]:
-            print event.button, 'released on', event.id
+            print(event.button, 'released on', event.id)
         elif event.type in [ pygame_wiimote.WIIMOTE_ACCEL, pygame_wiimote.NUNCHUK_ACCEL ]:
             if event.type == pygame_wiimote.WIIMOTE_ACCEL:
                 b = 0
@@ -60,9 +60,9 @@ while run:
                 old[b+c] = s
             screen.blit(screen, (-1, 0))
         elif event.type == pygame_wiimote.WIIMOTE_STATUS:
-            print 'status', event.dict
+            print('status', event.dict)
         elif event.type == pygame_wiimote.WIIMOTE_DISCONNECT:
-            print 'disconnected'
+            print('disconnected')
             run = False
             break
         elif event.type == pygame_wiimote.WIIMOTE_IR:
