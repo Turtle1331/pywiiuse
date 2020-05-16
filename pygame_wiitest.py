@@ -13,7 +13,7 @@ import os
 pygame.init()
 
 # initialze the wiimotes
-if os.name != 'nt': print 'press 1&2'
+if os.name != 'nt': print('press 1&2')
 pygame_wiimote.init(1, 5) # look for 1, wait 5 seconds
 n = pygame_wiimote.get_count() # how many did we get?
 
@@ -39,7 +39,7 @@ colors = [ (255,0,0), (0,255,0), (0,0,255), (255,255,0), (255, 0, 255), (0,255,2
 while run:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            print 'quiting'
+            print('quiting')
             run = False
             break
         elif event.type in [ pygame_wiimote.WIIMOTE_BUTTON_PRESS,
