@@ -12,7 +12,7 @@ nmotes = 2
 
 def handle_event(wmp):
     wm = wmp[0]
-    print '--- EVENT [wiimote id %i] ---' % wm.unid
+    print('--- EVENT [wiimote id %i] ---' % wm.unid)
     
     if wm.btns:
         for name, b in wiiuse.button.items():
