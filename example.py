@@ -20,14 +20,19 @@ def handle_event(wmp):
                 print(name, 'pressed')
 
         if wiiuse.is_just_pressed(wm, wiiuse.button['-']):
+            print("- pressed")
             wiiuse.motion_sensing(wmp, 0)
         if wiiuse.is_just_pressed(wm, wiiuse.button['+']):
+            print("+ pressed")
             wiiuse.motion_sensing(wmp, 1)
         if wiiuse.is_just_pressed(wm, wiiuse.button['B']):
+            print("B pressed")
             wiiuse.toggle_rumble(wmp)
         if wiiuse.is_just_pressed(wm, wiiuse.button['Up']):
+            print("D-Pad Up pressed")
             wiiuse.set_ir(wmp, 1)
         if wiiuse.is_just_pressed(wm, wiiuse.button['Down']):
+            print("D-Pad Down Pressed")
             wiiuse.set_ir(wmp, 0)
     
     if wiiuse.using_acc(wm):
