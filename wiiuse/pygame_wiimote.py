@@ -16,6 +16,7 @@ Gary Bishop January 2008
 '''
 
 import pygame
+import wiiuse
 from threading import Thread
 from queue import Queue, Empty
 import time
@@ -33,7 +34,7 @@ NUNCHUK_JOY = base + 8
 WIIMOTE_STATUS = base + 9
 WIIMOTE_DISCONNECT = base + 10
 
-wiiuse = None # import within the thread, why do I have to do this?
+#wiiuse = None # import within the thread, why do I have to do this?
 
 class wiimote_thread(Thread):
     '''Manage the wiiuse interface'''
@@ -50,8 +51,6 @@ class wiimote_thread(Thread):
     def run(self):
         '''This runs in a separate thread'''
         # import here to avoid thread problems on windows
-        global wiiuse
-        import wiiuse
         
         self.wiimotes = wiiuse.init(self.nmotes)
         found = wiiuse.find(self.wiimotes, self.nmotes, self.timeout)
