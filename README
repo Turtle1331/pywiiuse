@@ -1,3 +1,6 @@
+This is a fork of the pywiiuse module for python (I plan to add python3 support) 
+The original wrapper is here: https://github.com/tswast/pywiiuse
+
 
 PyWiiuse
 ========
@@ -11,6 +14,7 @@ It uses ctypes, so it should work with the official CPython or PyPy.
 Change log
 ----------
 
+2020-05-16 : Updated to be compatible for Python 3.8
 2012-07-01 : Updated to work with semi-official port wiiuse v0.13 (Thanks Juan Alvarez!)
 2010-10-22 : pywiiuse for wiiuse v0.12
 
