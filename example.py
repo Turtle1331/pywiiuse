@@ -105,7 +105,7 @@ except KeyboardInterrupt:
     for i in range(nmotes):
         wiiuse.set_leds(wiimotes[i], 0)
         wiiuse.rumble(wiimotes[i], 0)
-        wiiuse.disconnect(wiimotes[i])
+    wiiuse.cleanup(wiimotes, nmotes)
 
 print('done')
 

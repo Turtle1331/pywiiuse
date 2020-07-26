@@ -373,11 +373,12 @@ def init(nwiimotes):
     # wapi = wiiuse_api[0]
 
     # initialize our other function pointers
-    global find, connect, set_leds, rumble, status, poll, disconnect, motion_sensing
+    global find, connect, cleanup, set_leds, rumble, status, poll, disconnect, motion_sensing
     global set_ir, toggle_rumble, set_ir_vres, set_ir_position, set_aspect_ratio
     global set_orient_threshold, set_flags
     find = dll.wiiuse_find
     connect = dll.wiiuse_connect
+    cleanup = dll.wiiuse_cleanup
     set_leds = dll.wiiuse_set_leds
     rumble = dll.wiiuse_rumble
     status = dll.wiiuse_status
